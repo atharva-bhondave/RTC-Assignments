@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalEve</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            background-color: #21fdc5;
+            background-image: linear-gradient(19deg, #21fdc5 0%, #7921ff 100%);
+
+        }
+        .Name{
+            text-align: center;
+            font-family: "Chakra Petch", sans-serif;
+            
+            font-style: normal;
+        }
+        .text{
+            font-family: "Montserrat", sans-serif;
+            
+        }
+        .container{
+            width: 700px;
+            background-color: #7921ff;
+            background-image: linear-gradient(19deg, #7921ff 0%, #21fdc5 81%);
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        .box{
+            width: 80%;
+            margin: 10px auto;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .add{
+            margin: 10px auto;
+            width: 120px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 8px;
+            background-color: #FFBBEC;
+background-image: linear-gradient(180deg, #FFBBEC 0%, #A9C9FF 100%);
+
+        }
+        .add:hover{
+            transition: 0.1s;
+            box-shadow: 0px 0px 3px 3px  #99e5e8;
+            background-color: #A9C9FF;
+background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
+
+        }
+        .ans{
+            font-family: "Chakra Petch", sans-serif;
+            text-align: center;
+            font-size: 40px;
+        }
+        .reset{
+            font-family: "Chakra Petch", sans-serif;
+            margin: 10px auto;
+            display: block;
+            width: 80px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 8px;
+            background-color: #000;
+            color: #fff;
+        }
+        .reset:hover{
+            transition: 0.5s;
+            background-color: #fff;
+            color: #000;
+            box-shadow: 0px 0px 3px 3px grey;
+        }
+        .buttons{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="Name">CALEVE</h1>
+        <input type="number" class="box" id="num1" placeholder="Enter any Number">
+        <input type="number" class="box" id="num2" placeholder="Enter any Number">
+        <p class="ans">Answer: <span id="answer"></span></p>
+        <div class="buttons">
+        <button class="add text" onclick="AreaofRectangle()">Rectangle</button>
+        <button class="add text" onclick="AreaofCircle()">Circle</button>
+        <button class="reset">Reset</button>
+        <button class="add text" onclick="bmi()">B.M.I.</button>
+        <button class="add text" onclick="square()">Square</button>
+        </div>
+        <h1 class="Name">RULES</h1>
+        <div class="text">
+            <ul>
+                <li>You can calculate Areas of <b>Rectangle</b>&<b>Circle</b>,<b>B.M.I.</b>,<b>Square</b></li>
+                <li>For Rectangle, BMI you need to eneter both the <b>boxes</b></li>
+                <li>In case of Square, Circle you need to fill only <b>First</b> box</li>
+                <li>Every value is Considered as <b>cm</b> & <b>kg</b></li>
+                <li>Don't forget to <b>Reset</b> once you are done</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function AreaofRectangle(){
+        let a= document.getElementById("num1");
+         b= document.getElementById("num2");
+         c=parseInt(a.value)*parseInt(b.value);
+         answ=document.getElementById("answer");
+        answ.innerText=c
+        }
+        function AreaofCircle(){
+        let a= document.getElementById("num1");
+         c=3.14*parseInt(a.value)**2;
+         answ=document.getElementById("answer");
+        answ.innerText=c
+        }
+        function bmi(){
+        let a= document.getElementById("num1");
+         b= document.getElementById("num2");
+         c=parseFloat(a.value)/parseFloat(b.value)**2;
+         answ=document.getElementById("answer");
+        answ.innerText=c
+        }
+        function square(){
+        let a= document.getElementById("num1");
+         b= document.getElementById("num2");
+         c=parseInt(a.value)*parseInt(b.value);
+         answ=document.getElementById("answer");
+        answ.innerText=c
+        }
+    </script>
+</body>
+</html>
