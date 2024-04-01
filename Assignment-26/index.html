@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+    body{
+        
+    }
+    .container{
+        text-align: center;
+        width: 1000px;
+        margin: 30px auto;
+        display: flex;
+        display: block;
+        flex-wrap: wrap;
+    }
+    .btn-container{
+        display: block;
+        margin: 30px auto;
+        display: flex;
+        width: 1000px;
+        justify-content: space-between;
+        margin-bottom: -15px;
+        
+    }
+    .jersey{
+        background-color: aliceblue;
+    }
+    .logos{
+        mix-blend-mode: multiply;
+        padding: 20px;
+        border-radius: 50%;
+    }
+    .name{
+        font-family: "Chakra Petch", sans-serif;
+        font-weight: 300;
+        padding: 20px;
+    }
+    .n-container{
+        display: block;
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="jersey">
+    <img src="Portugal.jpg" height="400px" id="jersey">
+        </div>
+    <div class="btn-container">
+    <img src="ManU.png" height="100px" id="logo" class="logos" onclick="manu()">
+    <img src="Por.jpg" height="100px" id="logo1" class="logos" onclick="port()">
+    <img src="Rmd.png" height="100px" id="logo2" class="logos" onclick="mdc()">
+    <img src="Juv.png" height="100px" id="logo3" class="logos" onclick="jj()">
+    </div>
+    <div class="n-container">
+        <h1 class="name">Man United</h1>
+        <h1 class="name">Portugal</h1>
+        <h1 class="name">Real Madrid</h1>
+        <h1 class="name">Juventus</h1>
+    </div>
+    </div>
+    <script>
+        function manu(){
+        const a = document.getElementById("jersey");
+        a.src = "Man-United.jpg";
+        }
+        function port(){
+            const a = document.getElementById("jersey");
+            a.src = "Portugal.jpg";
+        }
+        function mdc(){
+            const a = document.getElementById("jersey");
+            a.src = "Madrid.jpg";
+        }
+        function jj(){
+            const a = document.getElementById("jersey");
+            a.src = "Juventus.jpg";
+        }
+    </script>
+</body>
+</html>
