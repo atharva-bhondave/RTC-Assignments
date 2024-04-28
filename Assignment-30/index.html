@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name{
+            text-align: center;
+        }
+        .dice{
+            height: 250px;
+            display: block;
+            margin:  30px auto;
+        }
+        .btn{
+            display: block;
+            margin:  30px auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="name">Dice Roller</h1>
+    <img src="dice.png" class="dice" id="image">
+    <button class="btn" onclick="roll()">Rock n Roll</button>
+    <script>
+         function roll() {
+            const min = 1;
+            const max = 6;
+            const randomNumber = Math.round(Math.random() * (max - min)) + min;
+            const image = document.getElementById('image');
+            switch (randomNumber) {
+                case 1: image.src = "one.png";
+                    break;
+                case 2: image.src = "two.png";
+                    break;
+                case 3: image.src = "three.png";
+                    break;
+                case 4: image.src = "four.png";
+                    break;
+                case 5: image.src = "five.png";
+                    break;
+                case 6: image.src = "six.png";
+                    break;
+                default: image.src = "dice.png";
+            }
+        }
+    </script>
+</body>
+</html>
